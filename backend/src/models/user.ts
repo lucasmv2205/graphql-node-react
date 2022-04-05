@@ -1,3 +1,4 @@
+import { Length } from "class-validator";
 import { Field, ID, ObjectType } from "type-graphql";
 
 @ObjectType()
@@ -7,6 +8,7 @@ export class User{
   id: string;
 
   @Field()
+  @Length(10, 50)
   name: string;
 
 }
